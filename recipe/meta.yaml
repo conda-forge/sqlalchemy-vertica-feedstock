@@ -1,5 +1,5 @@
 {% set name = "sqlalchemy-vertica" %}
-{% set version = "0.0.5" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/lv10/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 247714011232d532491f42140a7fce5e5571261c2e9b19e26ec482959fa19a42
+  sha256: 7bafa90bfb7f3fd31c1e53ebc41948549a4ae7014024015c07684135e8b78fca
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -37,7 +37,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Vertica dialect for sqlalchemy.'
+  summary: Vertica dialect for sqlalchemy.
   description: |
     Vertica dialect for sqlalchemy.
 
